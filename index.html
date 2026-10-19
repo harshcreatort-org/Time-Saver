@@ -1,0 +1,86 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0f0f0f">
+  <title>StreamTube - Watch Videos</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://i.ytimg.com">
+  <link rel="preconnect" href="https://www.youtube-nocookie.com">
+</head>
+<body>
+  <header class="topbar">
+    <button id="menuBtn" class="icon-btn" aria-label="Toggle menu">☰</button>
+
+    <a class="brand" href="#" id="homeBtn">
+      <span class="brand-icon">▶</span>
+      <span>StreamTube</span>
+    </a>
+
+    <form id="searchForm" class="search">
+      <input id="searchInput" placeholder="Search channel videos..."
+        aria-label="Search videos">
+      <button aria-label="Search">⌕</button>
+    </form>
+
+    <a class="youtube-link"
+      href="https://www.youtube.com/watch?v=L_L_LrvJhE4"
+      target="_blank" rel="noopener">YouTube ↗</a>
+  </header>
+
+  <aside id="sidebar" class="sidebar">
+    <button class="nav-item active" data-view="all">⌂ <span>Home</span></button>
+    <button class="nav-item" data-view="latest">◷ <span>Latest</span></button>
+    <button class="nav-item" data-view="popular">★ <span>Popular</span></button>
+    <hr>
+    <p class="side-heading">YOUR CHANNEL</p>
+    <div id="channelInfo" class="channel-info">
+      Videos from your selected channel
+    </div>
+    <a class="nav-item" href="https://www.youtube.com/"
+      target="_blank" rel="noopener">▶ <span>YouTube</span></a>
+  </aside>
+
+  <main class="main">
+    <section id="playerSection" class="player-section">
+      <div class="player-wrap">
+        <iframe id="player"
+          src="https://www.youtube-nocookie.com/embed/L_L_LrvJhE4"
+          title="YouTube video player"
+          allow="accelerometer; autoplay; clipboard-write;
+                 encrypted-media; gyroscope; picture-in-picture;
+                 web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen></iframe>
+      </div>
+      <h2 id="playingTitle">Welcome to StreamTube</h2>
+      <p id="playingDescription">
+        Select a video below to start watching.
+      </p>
+      <a id="openOriginal"
+        href="https://www.youtube.com/watch?v=L_L_LrvJhE4"
+        target="_blank" rel="noopener">Watch on YouTube ↗</a>
+    </section>
+
+    <div class="section-head">
+      <div>
+        <h1 id="sectionTitle">Videos</h1>
+        <p id="resultCount">Loading channel videos...</p>
+      </div>
+      <button id="showAllBtn" class="outline-btn">Show all</button>
+    </div>
+
+    <div id="status" role="status" aria-live="polite"></div>
+    <section id="videoGrid" class="video-grid"></section>
+
+    <footer>
+      Videos are played using YouTube's embedded player.
+      YouTube availability and playback restrictions still apply.
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+  </html>
